@@ -4,6 +4,7 @@ import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
 import project4 from "../assets/project4.png";
 import { ArrowsRightLeftIcon } from "@heroicons/react/16/solid";
+import project5 from "../assets/flashcard.png"
 
 const projects = [
   {
@@ -28,8 +29,15 @@ const projects = [
     href: "https://example.com/project3",
   },
   {
-    image: project4,
+    image: project5,
     title: "Desklib",
+    description:
+      "Desklib is an online platform that provides a large collection of study materials like assignments, essays, dissertations, and notes. It supports students and educators by offering access to high-quality academic resources, making learning and research easier. Users can also contribute by uploading their own documents, promoting a collaborative learning community.",
+    href: "https://example.com/project3",
+  },
+  {
+    image: project4,
+    title: "Locus",
     description:
       "Desklib is an online platform that provides a large collection of study materials like assignments, essays, dissertations, and notes. It supports students and educators by offering access to high-quality academic resources, making learning and research easier. Users can also contribute by uploading their own documents, promoting a collaborative learning community.",
     href: "https://example.com/project4",
@@ -47,11 +55,13 @@ function Projects() {
         >
           {index % 2 === 0 ? (
             <>
-              <img
-                src={project.image}
-                alt=""
-                width={index === 3 ? "auto" : "612px"}
-              />
+            <div className={project.title === "Locus" ? "flex justify-center" : ""}>
+                <img
+                  src={project.image}
+                  alt=""
+                  style={project.title === "Locus" ? { height: "300px" } : { width: "612px" }}
+                />
+              </div>
               <div className="flex flex-col justify-start items-start">
                 <h2 className="text-[32px] font-bold text-[#B64D4E]">
                   {project.title}
@@ -107,11 +117,11 @@ function Projects() {
                   </svg>
                 </a>
               </div>
-              <div className={index === 3 ? "flex justify-center" : ""}>
+              <div className={project.title === "Locus" ? "flex justify-center" : ""}>
                 <img
                   src={project.image}
                   alt=""
-                  width={index === 3 ? "300px" : "612px"}
+                  style={project.title === "Locus" ? { height: "200px" } : { width: "612px" }}
                 />
               </div>
             </>

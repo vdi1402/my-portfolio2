@@ -4,6 +4,8 @@ import HomeBanner from './components/HomeBanner';
 import Header from './components/Header';
 import Projects from './components/projects';
 import PortfolioSkills from './components/PortfolioSkills';
+import ContactUs from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
     <HomeBanner />
     <Projects />
     <PortfolioSkills />
+    <ContactUs />
+    <Footer />
     </div>
   );
 }
